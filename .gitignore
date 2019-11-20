@@ -88,3 +88,6 @@ sw.*
 
 # Vim swap files
 *.swp
+
+# Remove NPMRC Files
+.npmrc
