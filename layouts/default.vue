@@ -1,16 +1,16 @@
 <template>
-  <div>
+  <section class="section">
     <Nav />
-    <nuxt />
-  </div>
+    <nuxt ref="page" />
+  </section>
 </template>
 
 <script>
-import Nav from '~/components/Nav.vue'
+import Nav from "~/components/Nav.vue";
 
 export default {
   components: {
     Nav
   }
-}
+};
 </script>

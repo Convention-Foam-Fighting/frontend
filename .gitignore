@@ -91,3 +91,6 @@ sw.*
 
 # Remove NPMRC Files
 .npmrc
+
+# Remove Local Configs
+config/local*.js*

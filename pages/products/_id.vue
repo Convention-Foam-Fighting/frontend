@@ -25,6 +25,7 @@
             </div>
           </div>
         </div>
+        <product-images :images="images" />
         <div class="column is-6-desktop">
           <div class="level is-mobile">
             <div class="level-left">
@@ -128,12 +129,12 @@
 export default {
   data() {
     return {
-      title: 'Long Sword',
-      description: 'A long sword that is great for boffer fighting.',
-      image: 'http://conventionfoamfighting.com/images/sword.jpg'
-    }
+      title: "Long Sword",
+      description: "A long sword that is great for boffer fighting.",
+      image: "http://conventionfoamfighting.com/images/sword.jpg"
+    };
   }
-}
+};
 </script>
 
 <style scoped>

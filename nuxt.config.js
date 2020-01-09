@@ -27,7 +27,11 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: [
+    '~/plugins/vuelidate.js',
+    '~/plugins/vue-signature-pad.js',
+    '~/plugins/vue-async-computed.js'
+  ],
   /*
    ** Nuxt.js dev-modules
    */
@@ -39,6 +43,7 @@ export default {
    ** Nuxt.js modules
    */
   modules: [
+    'nuxt-config/module',
     // Doc: https://buefy.github.io/#/documentation
     'nuxt-buefy',
     // Doc: https://axios.nuxtjs.org/usage

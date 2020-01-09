@@ -1,13 +1,11 @@
 <template>
-  <section class="hero is-link is-fullheight is-primary">
-    <div class="hero-body">
-      <div class="container">
-        <p class="title">
-          Fullheight hero with navbar
-        </p>
-      </div>
-    </div>
-  </section>
+  <section />
 </template>
 
-<script></script>
+<script>
+export default {
+  beforeRouteEnter(to, from, next) {
+    next("/waiver");
+  }
+};
+</script>
