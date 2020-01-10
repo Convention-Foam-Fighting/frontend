@@ -93,7 +93,7 @@ export default {
       };
 
       const res = await fetch(`${this.$config.serverUrl}/waivers`, options);
-      if (res.status >= 400) {
+      if (res.status >= 400 && res.status !== 409) {
         const json = await res.json();
         throw new Error(json);
       }

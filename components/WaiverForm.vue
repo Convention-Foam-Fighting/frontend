@@ -3,16 +3,25 @@
     <form @submit.prevent="submit()">
       <b-field grouped group-multiline>
         <b-field label="First Name" expanded>
-          <b-input v-model="firstName" required />
+          <b-input
+            v-model="firstName"
+            @change.native="checkWaiver()"
+            required
+          />
         </b-field>
         <b-field label="Last Name" expanded>
-          <b-input v-model="lastName" required />
+          <b-input v-model="lastName" @change.native="checkWaiver()" required />
         </b-field>
       </b-field>
 
       <b-field grouped group-multiline>
         <b-field label="Email" expanded>
-          <b-input v-model="email" type="email" required />
+          <b-input
+            v-model.lazy="email"
+            @input.native="checkWaiver()"
+            type="email"
+            required
+          />
         </b-field>
         <b-field label="Date of Birth" expanded>
           <b-datepicker
@@ -128,6 +137,35 @@ export default {
     }
   },
   methods: {
+    async checkWaiver() {
+      const { firstName, lastName, email, $v } = this;
+      if (
+        firstName &&
+        lastName &&
+        email &&
+        !$v.firstName.$invalid &&
+        !$v.lastName.$invalid &&
+        !$v.email.$invalid
+      ) {
+        const url = new URL(`${this.$config.serverUrl}/waivers/check`);
+        url.search = new URLSearchParams({
+          firstName,
+          lastName,
+          email
+        }).toString();
+
+        const res = await fetch(url.toString(), { mode: "cors" });
+        if (res.ok) {
+          const json = await res.json();
+          if (json.length > 0) {
+            json[0].accept = true;
+            json[0].signature = true;
+            this.setWaiver(json[0]);
+            this.next({ step: 3 });
+          }
+        }
+      }
+    },
     submit() {
       const { adult, birthday, email, firstName, lastName, parent } = this;
 

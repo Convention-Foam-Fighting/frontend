@@ -41,7 +41,7 @@ export default {
         const url = new URL(`${this.$config.serverUrl}/waivers`);
         url.search = new URLSearchParams({ search: this.search }).toString();
 
-        const res = await fetch(url, {
+        const res = await fetch(url.toString(), {
           method: "GET",
           mode: "cors"
         });
