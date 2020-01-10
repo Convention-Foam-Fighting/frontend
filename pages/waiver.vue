@@ -119,7 +119,7 @@ export default {
   margin-top: 1rem;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 499px) {
   .bottom {
     padding-top: 25vh;
   }

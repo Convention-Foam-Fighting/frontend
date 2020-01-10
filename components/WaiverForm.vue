@@ -164,7 +164,7 @@ button[type="submit"] {
   background: #ff3860 !important;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 499px) {
   button[type="submit"] {
     width: 100%;
   }

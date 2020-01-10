@@ -5,10 +5,10 @@ module.exports = {
   serverUrl: "http://localhost:1337",
 
   client: {
-    clientUrl: defer(() => {
+    clientUrl: defer(function () {
       return this.clientUrl;
     }),
-    serverUrl: defer(() => {
+    serverUrl: defer(function () {
       return this.serverUrl;
     })
   }

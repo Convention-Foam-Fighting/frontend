@@ -1,9 +1,9 @@
 <template>
-  <div class="section">
+  <section class="section">
     <h2 class="title is-2">
-      Admin Section
+      Scan Code Below
     </h2>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -11,3 +11,9 @@ export default {
   layout: "admin"
 };
 </script>
+
+<style scoped>
+.section {
+  padding-top: 0;
+}
+</style>
