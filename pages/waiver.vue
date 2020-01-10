@@ -33,7 +33,34 @@
         <b-button @click="save" type="is-primary">Submit</b-button>
       </b-step-item>
       <b-step-item label="Confirmation">
-        <QrCode :waiver="waiver" />
+        <div class="columns">
+          <div class="column is-one-third is-offset-4">
+            <div class="card">
+              <div class="card-content has-text-centered">
+                <span class="title is-2">
+                  Completed!
+                </span>
+              </div>
+
+              <div class="card-image">
+                <figure class="image is-square">
+                  <QrCode :waiver="waiver" />
+                </figure>
+              </div>
+
+              <div class="card-content is-size-5">
+                <!-- prettier-ignore -->
+                <p>
+                  The QR Code above is your confirmation that you've accepted the terms and agreements.
+                  An email will be sent to <strong>{{ this.waiver.parent.email || this.waiver.email }}</strong>
+                  shortly with this code. Feel free to take a picture of this to present at future dates. This
+                  will save you time from having to fill out the waiver again. Have a great day
+                  {{ this.waiver.parent.firstName || this.waiver.first }}!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </b-step-item>
     </b-steps>
   </div>
@@ -55,7 +82,8 @@ export default {
       activeStep: 0,
       waiver: {
         accept: undefined,
-        signature: undefined
+        signature: undefined,
+        parent: {}
       }
     };
   },
@@ -117,6 +145,10 @@ export default {
 }
 .container {
   margin-top: 1rem;
+}
+
+.card-content {
+  background-color: lavender;
 }
 
 @media only screen and (max-width: 499px) {

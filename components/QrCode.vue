@@ -1,9 +1,9 @@
 <template>
-  <img :src="code" alt="qr code" />
+  <img :src="qrcode" alt="qr code" />
 </template>
 
 <script>
-import * as QRCode from "qrcode";
+import * as qrcode from "qrcode";
 
 export default {
   props: {
@@ -15,9 +15,8 @@ export default {
     }
   },
   asyncComputed: {
-    async code() {
-      const code = await QRCode.toDataURL(JSON.stringify(this.waiver));
-      return code;
+    qrcode() {
+      return qrcode.toDataURL(JSON.stringify(this.waiver));
     }
   }
 };
