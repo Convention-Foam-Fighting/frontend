@@ -27,6 +27,7 @@
           <b-datepicker
             v-model="birthday"
             placeholder="Click to select..."
+            editable
             required
           />
         </b-field>
