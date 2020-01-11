@@ -30,7 +30,8 @@ export default {
   plugins: [
     '~/plugins/vuelidate.js',
     '~/plugins/vue-signature-pad.js',
-    '~/plugins/vue-async-computed.js'
+    '~/plugins/vue-async-computed.js',
+    // '~/plugins/vue-qrcode-reader.js'
   ],
   /*
    ** Nuxt.js dev-modules

@@ -37,6 +37,7 @@
     "nuxt-fontawesome": "^0.4.0",
     "qrcode": "^1.4.4",
     "vue-async-computed": "^3.8.2",
+    "vue-qrcode-reader": "^2.1.1",
     "vue-signature-pad": "^1.1.17",
     "vuelidate": "^0.7.4"
   },
