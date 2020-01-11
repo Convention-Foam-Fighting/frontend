@@ -4,7 +4,7 @@
       Scan Code Below
     </h2>
     <p>Page Under Construction</p>
-    <!--    <qrcode-capture @decode="onDecode"></qrcode-capture>-->
+    <!--<qrcode-capture @decode="onDecode"></qrcode-capture>-->
   </section>
 </template>
 
