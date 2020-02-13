@@ -1,4 +1,4 @@
 module.exports = {
-  clientUrl: "http://cff.inventx.io",
-  serverUrl: "http://cff.inventx.io:1337"
+  clientUrl: "https://cff.inventx.io",
+  serverUrl: "https://cff.inventx.io:1337"
 };

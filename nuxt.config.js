@@ -1,5 +1,20 @@
+import config from 'config';
+import fs from 'fs';
+
+const certPath = config.get('certPath');
+const server = {};
+
+if (certPath) {
+  server.https = {
+    key: fs.readFileSync(`${certPath}/privkey.pem`),
+    cert: fs.readFileSync(`${certPath}/cert.pem`),
+    ca: fs.readFileSync(`${certPath}/chain.pem`)
+  }
+}
+
 export default {
   mode: 'universal',
+  server,
   /*
    ** Headers of the page
    */

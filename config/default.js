@@ -1,6 +1,7 @@
 const defer = require('config/defer').deferConfig;
 
 module.exports = {
+  certPath: '',
   clientUrl: "http://localhost",
   serverUrl: "http://localhost:1337",
 
