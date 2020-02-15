@@ -143,6 +143,7 @@ export default {
 .step-item {
   padding-top: 1.5rem;
 }
+
 .container {
   margin-top: 1rem;
 }
