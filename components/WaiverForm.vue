@@ -4,18 +4,18 @@
       <b-field grouped group-multiline>
         <b-field label="First Name" expanded>
           <b-input
-            v-model="firstName"
+            v-model.trim="firstName"
             @change.native="checkWaiver()"
             required
           />
         </b-field>
         <b-field label="Last Name" expanded>
-          <b-input v-model="lastName" @change.native="checkWaiver()" required />
+          <b-input v-model.trim="lastName" @change.native="checkWaiver()" required />
         </b-field>
       </b-field>
 
       <b-field grouped group-multiline>
-        <b-field label="Email" expanded>
+        <b-field label.trim="Email" expanded>
           <b-input
             v-model.lazy="email"
             @input.native="checkWaiver()"
@@ -121,13 +121,11 @@ export default {
         })
       },
       firstName: {
-        alpha,
         required: required(() => {
           return !this.adult;
         })
       },
       lastName: {
-        alpha,
         required: required(() => {
           return !this.adult;
         })
