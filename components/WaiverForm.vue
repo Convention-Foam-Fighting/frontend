@@ -106,11 +106,9 @@ export default {
       required
     },
     firstName: {
-      alpha,
       required
     },
     lastName: {
-      alpha,
       required
     },
     parent: {
