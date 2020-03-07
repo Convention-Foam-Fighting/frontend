@@ -17,7 +17,7 @@
       <b-field grouped group-multiline>
         <b-field label.trim="Email" expanded>
           <b-input
-            v-model.lazy="email"
+            v-model.lazy.trim="email"
             @input.native="checkWaiver()"
             type="email"
             required
