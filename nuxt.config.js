@@ -6,7 +6,7 @@ const server = {https: {}};
 
 if (certPath) {
   server.https = {
-    key: fs.readFileSync(`${certPath}/key.pem`),
+    key: fs.readFileSync(`${certPath}/privkey.pem`),
     cert: fs.readFileSync(`${certPath}/cert.pem`)
   }
 }
