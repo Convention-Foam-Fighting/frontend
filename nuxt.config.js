@@ -2,19 +2,19 @@ import config from 'config';
 import fs from 'fs';
 
 const certPath = config.get('certPath');
-const server = {};
+const server = {https: {}};
 
 if (certPath) {
   server.https = {
-    key: fs.readFileSync(`${certPath}/privkey.pem`),
-    cert: fs.readFileSync(`${certPath}/cert.pem`),
-    ca: fs.readFileSync(`${certPath}/chain.pem`)
+    key: fs.readFileSync(`${certPath}/key.pem`),
+    cert: fs.readFileSync(`${certPath}/cert.pem`)
   }
 }
 
 export default {
   mode: 'universal',
   server,
+  serverMiddleware: ["redirect-ssl"],
   /*
    ** Headers of the page
    */
@@ -45,8 +45,7 @@ export default {
   plugins: [
     '~/plugins/vuelidate.js',
     '~/plugins/vue-signature-pad.js',
-    '~/plugins/vue-async-computed.js',
-    // '~/plugins/vue-qrcode-reader.js'
+    '~/plugins/vue-async-computed.js'
   ],
   /*
    ** Nuxt.js dev-modules
