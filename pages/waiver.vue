@@ -52,8 +52,8 @@
                 <!-- prettier-ignore -->
                 <p>
                   The QR Code above is your confirmation that you've accepted the terms and agreements.
-                  An email will be sent to <strong>{{ this.waiver.parent.email || this.waiver.email }}</strong>
-                  shortly with this code. Feel free to take a picture of this to present at future dates. This
+                  <span style="display: none;">An email will be sent to <strong>{{ this.waiver.parent.email || this.waiver.email }}</strong>
+                  shortly with this code.</span> Take a picture of this to present at future dates. This
                   will save you time from having to fill out the waiver again. Have a great day
                   {{ this.waiver.parent.firstName || this.waiver.first }}!
                 </p>

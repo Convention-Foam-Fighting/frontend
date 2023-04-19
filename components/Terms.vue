@@ -11,7 +11,7 @@
           <h4>ACTIVITY AND ASSOCIATED RISKS</h4>
           <p>
             I have chosen to participate in Boffer Fighting, (hereinafter referred to as “the Sport”) which is organized
-            by Convention Foam Fighting. (hereinafter referred to as “CFF”).
+            by Convention Foam Fighting, LLC. (hereinafter referred to as “CFF”).
           </p>
 
           <p>I understand that:</p>
