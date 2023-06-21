@@ -31,7 +31,7 @@
     "@nuxtjs/font-awesome": "^1.0.4",
     "@nuxtjs/pwa": "^3.0.0-0",
     "config": "^3.2.4",
-    "nuxt": "^2.11.0",
+    "nuxt": "^3.4.3",
     "nuxt-buefy": "^0.3.20",
     "nuxt-config": "^1.0.1",
     "nuxt-fontawesome": "^0.4.0",
